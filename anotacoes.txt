@@ -1,0 +1,62 @@
+- instalando dependências
+npm i
+
+- outras dependências...
+
+npm i react-router-dom
+npm i react-icons
+
+1 - Limpar o conteúdo que vem ao criar um app com Vite
+
+2 - Criar variáveis de ambiente
+
+criar um arquivo ".env" na raiz
+
+Por padrão do vite, ao criar as variáveis no arquivo ".env", devemos colocar "VITE_"
+
+EX: VITE_API=https://api.themoviedb.org/3/movie/
+
+3 - criar a pasta "Pages" com os arquivos Home.jsx, Movie.jsx e Search.jsx
+
+4 - configurar o React Router no main.jsx e chamar as páginas criadas
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
+<BrowserRouter>
+    <Routes>
+      <Route element={<App />}>
+        <Route path='/' element={<Home />} />
+        <Route path='movie/:id' element={<Movie />} />
+        <Route path='search' element={<Search />} />
+      </Route>
+    </Routes>
+</BrowserRouter>
+
+5 - Criar a pasta components
+
+6 - Criar uma Navbar.jsx
+
+<nav id="navbar">
+    <h2>
+        <Link to="/">React Movies Catalog</Link>
+    </h2>
+    <Link to="/movie/1">Movie</Link>
+    <Link to="/search">Search</Link>
+</nav>
+
+
+7 - Inserir o component <outlet/> (para ver os componentes certos em cada url) no app.jsx
+
+8 - Estilizar index.css
+
+9 - Seguir numeração nos arquivos...
+
+
+
+tmdb 
+user: ricardo_braga
+senha: 501105
+
+clone TMDB
+
+https://www.youtube.com/playlist?list=PL0iqFv2LO1chzQ9605xuy9IREm68IE9_I
