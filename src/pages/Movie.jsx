@@ -1,13 +1,7 @@
-//22
 import { useState, useEffect } from "react";
-
-// vamos usar useParams pois está intrínseco na url (path='movie/:id')
 import { useParams } from "react-router-dom";
-
 import { BsGraphUp, BsWallet2, BsHourglassSplit, BsFillFileEarmarkTextFill } from 'react-icons/bs';
-
 import MovieCard from "../components/MovieCard";
-
 import './Movie.css';
 
 const moviesURL = import.meta.env.VITE_API;
@@ -15,7 +9,6 @@ const apiKey = import.meta.env.VITE_API_KEY;
 
 const Movie = () => {
 
-    //23 para pegar o id, desestruturamos o objeto...
     const {id} = useParams();
 
     const [movie, setMovie] = useState(null);
@@ -24,7 +17,6 @@ const Movie = () => {
         const res = await fetch(url);
         const data = await res.json();
 
-        //como vai retornar apenas 1 cara, podemos deixar apenas "data"
         setMovie(data);
     }
 

@@ -1,9 +1,6 @@
-//6
 import { Link } from "react-router-dom"
 import {FaStar} from "react-icons/fa"
 
-//7
-//desse cara, vou esperar um objeto chamado movie (/movie/)
 const imageUrl = import.meta.env.VITE_IMG;
 
 const MovieCard = ({ movie, showLink = true }) => {

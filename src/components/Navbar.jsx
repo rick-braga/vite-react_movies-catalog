@@ -1,4 +1,3 @@
-//10 iniciando funcionalidade da busca
 import { useState } from "react";
 
 import { Link, useNavigate } from "react-router-dom";
@@ -7,13 +6,10 @@ import './Navbar.css';
 
 const Navbar = () => {
 
-    //11
     const [search, setSearch] = useState("");
 
-    //13 usando useNavigate
     const navigate = useNavigate();
 
-    //14
     const handleSubmit = (e) => {
         e.preventDefault();
 
@@ -31,9 +27,7 @@ const Navbar = () => {
         <h2>
             <Link to="/"><BiCameraMovie /> React Movies Catalog</Link>
         </h2>
-        {/* 14 inserindo o onSubmit */}
         <form onSubmit={handleSubmit}>
-            {/* 12 inserindo o onChange */}
             <input 
             type="text" 
             placeholder="Busque um filme..." 
